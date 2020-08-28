@@ -4,7 +4,6 @@ import { NgModule } from '@angular/core';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { RoundComponent } from './components/round/round.component';
-import { PlayersComponent } from './components/players/players.component';
 import { DartsComponent } from './components/darts/darts.component';
 import { NextPlayerComponent } from './components/next-player/next-player.component';
 import { DartboardComponent } from './components/dartboard/dartboard.component';
@@ -17,12 +16,12 @@ import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
+import { MatGridListModule } from '@angular/material/grid-list';
 
 @NgModule({
   declarations: [
     AppComponent,
     RoundComponent,
-    PlayersComponent,
     DartsComponent,
     NextPlayerComponent,
     DartboardComponent,
@@ -39,6 +38,7 @@ import { MatIconModule } from '@angular/material/icon';
     MatInputModule,
     MatButtonModule,
     MatIconModule,
+    MatGridListModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
