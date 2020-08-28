@@ -1,0 +1,70 @@
+<div class="new-game-container">
+  <mat-card class="new-game-card">
+    <mat-card-header class="new-game-card-header">
+      <mat-card-title class="title">New Cricket</mat-card-title>
+      <mat-card-subtitle class="subtitle"
+        >Select the number of rounds</mat-card-subtitle
+      >
+    </mat-card-header>
+    <mat-card-content class="">
+      <mat-radio-group #radioRounds aria-label="Select an option">
+        <mat-radio-button
+          class="round-input-1"
+          #ten
+          value="10"
+          (click)="selectRounds(ten.value)"
+          >10</mat-radio-button
+        >
+        <mat-radio-button
+          class="round-input-2"
+          #twenty
+          value="20"
+          (click)="selectRounds(twenty.value)"
+          >20</mat-radio-button
+        >
+      </mat-radio-group>
+    </mat-card-content>
+  </mat-card>
+
+  <mat-card class="new-game-card">
+    <mat-card-header class="new-game-card-header">
+      <mat-card-title class="title">New Player</mat-card-title>
+      <mat-card-subtitle class="subtitle">Set new players</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content class="new-game-card-content">
+      <form class="new-player-form">
+        <mat-form-field class="example-full-width">
+          <mat-label>Name</mat-label>
+          <input matInput #name maxlength="50" />
+          <mat-hint align="start"
+            ><strong>Select a player name...</strong>
+          </mat-hint>
+        </mat-form-field>
+        <button
+          mat-mini-fab
+          color="accent"
+          aria-label="Example icon button with a plus one icon"
+          (click)="newPlayer(name.value)"
+          type="reset"
+        >
+          <mat-icon>add_circle_outline</mat-icon>
+        </button>
+      </form>
+    </mat-card-content>
+  </mat-card>
+  <mat-card class="new-game-card">
+    <mat-card-header class="new-game-card-header">
+      <mat-card-title class="title">Start game!</mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="new-game-card-content">
+      <button
+        mat-mini-fab
+        color="accent"
+        aria-label="Example icon button with a plus one icon"
+        (click)="newGame()"
+      >
+        <mat-icon>check</mat-icon>
+      </button>
+    </mat-card-content>
+  </mat-card>
+</div>
